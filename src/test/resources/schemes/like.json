@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "likes": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "count",
+            "status"
+          ]
+        },
+        "type": {
+          "type": "string"
+        },
+        "userDiscussionInfo": {
+          "type": "null"
+        },
+        "rating": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "likes",
+        "type",
+        "userDiscussionInfo",
+        "rating"
+      ]
+    }
+  ]
+}

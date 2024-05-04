@@ -1,0 +1,30 @@
+package config;
+
+public enum ExpectedData {
+
+    EXPECTED_ID_All(2),
+    EXPECTED_ID_SNAKE(2),
+    EXPECTED_TASKS_TOTAL_SNAKE(20),
+    EXPECTED_ID_MOON_LANDER(23),
+    EXPECTED_ID_MINESWEEPER(1),
+    EXPECTED_TASKS_TOTAL_MINESWEEPER(16),
+    EXPECTED_COUNT(323),
+    EXPECTED_ID_DISCUSSIONS(13),
+    EXPECTED_OWNER_COMMENTS(4),
+    EXPECTED_ID_COMMENTS(932598),
+    EXPECTED_ID_INTERVIEW(29),
+    EXPECTED_ID_INTERNSHIP(30),
+    EXPECTED_USER_ID_INTERNSHIP(78),
+    EXPECTED_USER_ID_ONE(2209041),
+    EXPECTED_USER_ID_TWO(3320682),
+    EXPECTED_USER_ID_THREE(3180543);
+
+    public final int value;
+    ExpectedData(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
+}

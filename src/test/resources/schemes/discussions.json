@@ -1,0 +1,72 @@
+{
+  "application": {
+    "applicationId": "JAVARUSH",
+    "brandName": "JavaRush",
+    "supportedLanguages": [
+      "RUSSIAN",
+      "UKRAINIAN",
+      "ENGLISH"
+    ],
+    "defaultLanguage": "RUSSIA",
+    "disabledFeatures": [
+      "EDU",
+      "PRESS",
+      "ABOUT",
+      "INDIA_UNIVERSITY"
+    ],
+    "serverName": "javarush.com",
+    "serverUrl": "https://javarush.com",
+    "cdnUrl": "https://cdn.javarush.com",
+    "websocketUrl": "wss://javarush.com/ws",
+    "recaptchaKey": "6LfN8dgZAAAAAHb0xPNbrsRFB4XeOrlnAK-2IvbO",
+    "gtmKey": "GTM-NH6ZXRJ",
+    "intercomAppId": "mqlef7yz",
+    "supportedPaymentSystems": [
+      "visa",
+      "mastercard",
+      "unionpay",
+      "maestro",
+      "privat24",
+      "applepay",
+      "browser",
+      "liqpay",
+      "perfectmoney",
+      "paypal",
+      "advcash",
+      "bitcoin",
+      "stripecheckout",
+      "wayforpay",
+      "partsmono",
+      "partsprivat",
+      "partsabank",
+      "installmentglobus",
+      "partsoschad",
+      "installmentraiffeisen",
+      "usdt",
+      "doge"
+    ],
+    "accountsSocialNetworks": [
+      "facebook",
+      "google",
+      "twitter",
+      "linkedin",
+      "github",
+      "vkontakte"
+    ],
+    "sharingSocialNetworks": [
+      "facebook",
+      "twitter",
+      "linkedin"
+    ]
+  },
+  "firebase": {
+    "apiKey": "AIzaSyC4TMvfrPQTBvktrGQxzP2-lBYzgazT1Mo",
+    "authDomain": "jaxarush-app.firebaseapp.com",
+    "databaseURL": "https://jaxarush-app.firebaseio.com",
+    "projectId": "jaxarush-app",
+    "storageBucket": "jaxarush-app.appspot.com",
+    "messagingSenderId": "610126415284",
+    "appId": "1:610126415284:web:97bb922cd6b06f88bd1ee1",
+    "measurementId": "G-TNJZNMQ3GC"
+  }
+}

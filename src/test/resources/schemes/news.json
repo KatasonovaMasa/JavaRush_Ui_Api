@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "type": {
+          "type": ["string", "null"]
+        },
+        "title": {
+          "type": ["string", "null"]
+        },
+        "description": {
+          "type": ["string", "null"]
+        },
+        "time": {
+          "type": "integer"
+        },
+        "user": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "userId": {
+              "type": "integer"
+            },
+            "key": {
+              "type": ["string", "null"]
+            },
+            "pictureUrl": {
+              "type": ["string", "null"]
+            },
+            "displayName": {
+              "type": ["string", "null"]
+            },
+            "position": {
+              "type": ["string", "null"]
+            },
+            "job": {
+              "type": ["string", "null"]
+            },
+            "country": {
+              "type": ["string", "null"]
+            },
+            "city": {
+              "type": ["string", "null"]
+            },
+            "level": {
+              "type": "integer"
+            },
+            "rating": {
+              "type": "integer"
+            },
+            "publicStatus": {
+              "type": ["string", "null"]
+            },
+            "publicStatusMessage": {
+              "type": ["string", "null"]
+            }
+          },
+          "required": [
+            "id",
+            "userId",
+            "key",
+            "pictureUrl",
+            "displayName",
+            "position",
+            "job",
+            "country",
+            "city",
+            "level",
+            "rating",
+            "publicStatus",
+            "publicStatusMessage"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "title",
+        "description",
+        "time",
+        "user"
+      ]
+    }
+  ]
+}

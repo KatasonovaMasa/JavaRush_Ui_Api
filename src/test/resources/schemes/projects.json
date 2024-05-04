@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "key": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "taskKey": {
+          "type": "string"
+        },
+        "iconUrl": {
+          "type": "string"
+        },
+        "coverUrl": {
+          "type": "string"
+        },
+        "pictureUrl": {
+          "type": "string"
+        },
+        "appCoverUrl": {
+          "type": "string"
+        },
+        "videoUrl": {
+          "type": "string"
+        },
+        "preferredUserLevel": {
+          "type": "integer"
+        },
+        "status": {
+          "type": "string"
+        },
+        "tasksTotal": {
+          "type": "integer"
+        },
+        "tasksCompleted": {
+          "type": "integer"
+        },
+        "visibilityStatus": {
+          "type": "string"
+        },
+        "appId": {
+          "type": ["integer", "null"]
+        }
+      },
+      "required": [
+        "id",
+        "key",
+        "title",
+        "description",
+        "content",
+        "taskKey",
+        "iconUrl",
+        "coverUrl",
+        "pictureUrl",
+        "appCoverUrl",
+        "videoUrl",
+        "preferredUserLevel",
+        "status",
+        "tasksTotal",
+        "tasksCompleted",
+        "visibilityStatus",
+        "appId"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "userId": {
+          "type": "integer"
+        },
+        "key": {
+          "type": "string"
+        },
+        "pictureUrl": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "position": {
+          "type": ["string", "null"]
+        },
+        "job": {
+          "type": ["string", "null"]
+        },
+        "country": {
+          "type": "string"
+        },
+        "city": {
+          "type": ["string", "null"]
+        },
+        "level": {
+          "type": "integer"
+        },
+        "rating": {
+          "type": "integer"
+        },
+        "publicStatus": {
+          "type": "string"
+        },
+        "publicStatusMessage": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "key",
+        "pictureUrl",
+        "displayName",
+        "position",
+        "job",
+        "country",
+        "city",
+        "level",
+        "rating",
+        "publicStatus",
+        "publicStatusMessage"
+      ]
+    }
+  ]
+}

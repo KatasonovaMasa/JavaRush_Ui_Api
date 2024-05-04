@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "key": {
+      "type": "string"
+    },
+    "referenceKey": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "user": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "userId": {
+          "type": "integer"
+        },
+        "key": {
+          "type": "string"
+        },
+        "pictureUrl": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "position": {
+          "type": "string"
+        },
+        "job": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "level": {
+          "type": "integer"
+        },
+        "rating": {
+          "type": "integer"
+        },
+        "publicStatus": {
+          "type": "string"
+        },
+        "publicStatusMessage": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "key",
+        "pictureUrl",
+        "displayName",
+        "position",
+        "job",
+        "country",
+        "city",
+        "level",
+        "rating",
+        "publicStatus",
+        "publicStatusMessage"
+      ]
+    },
+    "visibilityStatus": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "key",
+    "referenceKey",
+    "type",
+    "title",
+    "description",
+    "content",
+    "user",
+    "visibilityStatus",
+    "language"
+  ]
+}
