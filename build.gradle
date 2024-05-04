@@ -32,7 +32,6 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-
 def
         allureJunitVersion = "2.25.0",
         assertjCoreVersion = "3.25.3",
@@ -40,11 +39,10 @@ def
         slf4jSimpleVersion = "2.0.9",
         commonsIoVersion = "2.11.0",
         javaFakerVersion = "1.0.2",
-        selenideVersion = "6.13.0",
+        selenideVersion = "7.2.3",
         jacksonVersion = "2.14.2",
         lombokVersion = "1.18.22",
         allureVersion = "2.21.0",
-        appiumVersion = "8.3.0",
         ownerVersion = "1.0.4",
         junitVersion = "5.10.2",
         restAssured = "4.5.1"
@@ -64,9 +62,7 @@ dependencies {
             "io.qameta.allure:allure-junit5:$allureJunitVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
             "io.rest-assured:rest-assured:$restAssured",
-            "io.appium:java-client:$appiumVersion",
             "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
-            "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
             "com.github.javafaker:javafaker:$javaFakerVersion",
             "com.codeborne:selenide:$selenideVersion",
             "org.projectlombok:lombok:$lombokVersion",
@@ -92,8 +88,16 @@ test {
     useJUnitPlatform()
 }
 
-task JRMobile(type: Test) {
+task JRUI(type: Test) {
     useJUnitPlatform {
-        includeTags "JRMobile"
+        maxParallelForks = 25
+        includeTags ("JRUI")
+    }
+}
+
+task JRApi(type: Test){
+    useJUnitPlatform{
+        maxParallelForks = 25
+        includeTags("JRApi")
     }
 }
