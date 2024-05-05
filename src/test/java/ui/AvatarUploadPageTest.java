@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import static help.GenerateRandomPage.generateRockStarText;
 
-@Tag("JRUI")
+@Tag("JRUIY")
 @Owner("Катасонова Мария")
 @Feature("Автотесты для UI")
 @Story("Загрузка аватара в фото профиля")

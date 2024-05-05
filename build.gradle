@@ -101,4 +101,11 @@ task JRApi(type: Test){
         maxParallelForks = 25
         includeTags("JRApi")
     }
+
+task JRUIY(type: Test) {
+    useJUnitPlatform {
+        maxParallelForks = 25
+        includeTags("JRUIY")
+    }
+}
 }
