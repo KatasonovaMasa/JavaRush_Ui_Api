@@ -8,6 +8,7 @@ import java.io.File;
 
 import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.sleep;
 
 public class AvatarUploadStep {
 
@@ -25,12 +26,14 @@ public class AvatarUploadStep {
     @Step("Загрузить картинку")
     public void uploadAPicture(String imgUpload) {
         WebDriverRunner.getWebDriver().manage().window().maximize();
+        sleep(1000);
         avatarUploadPage.avatarUpload.uploadFromClasspath(imgUpload);
     }
 
     @Step("Загрузить картинку")
     public void uploadAPictureTwo() {
         WebDriverRunner.getWebDriver().manage().window().maximize();
+        sleep(1000);
         avatarUploadPage.avatarUpload.uploadFile(file);
     }
 
