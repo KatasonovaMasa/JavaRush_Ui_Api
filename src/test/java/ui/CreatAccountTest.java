@@ -7,7 +7,7 @@ import org.junit.jupiter.api.*;
 
 import static help.GenerateRandomPage.generateRockStarText;
 
-@Tag("JRUI")
+@Tag("JRUIY")
 @Owner("Катасонова Мария")
 @Feature("Автотесты для UI")
 @Story("Создание аккаунта")
