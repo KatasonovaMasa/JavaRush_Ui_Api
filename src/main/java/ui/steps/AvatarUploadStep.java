@@ -1,5 +1,6 @@
 package ui.steps;
 
+import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Step;
 import ui.pages.AvatarUploadPage;
 
@@ -16,6 +17,7 @@ public class AvatarUploadStep {
 
     @Step("Нажать на редактирование аватара профиля")
     public void openPhotoUploadInEditMode() {
+        WebDriverRunner.getWebDriver().manage().window().maximize();
         avatarUploadPage.editPhotoProfile.should(hidden.because("Кнопка редактирования не видна"));
         avatarUploadPage.editPhotoProfile.shouldBe(visible.because("Кнопка редактирования не нажата")).click();
     }
