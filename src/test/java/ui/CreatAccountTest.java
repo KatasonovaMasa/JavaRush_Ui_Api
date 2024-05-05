@@ -30,7 +30,8 @@ public class CreatAccountTest extends TestBase {
         creatACourseStep.inputPassword(expectedPassword);
         creatACourseStep.clickCreatAccount();
         creatACourseStep.checkCreatAccount();
-        sidebarStep.scrollDownAndOpenSettings();
+        sidebarStep.scrollDownSettings();
+        sidebarStep.openSettings();
         creatACourseStep.clickDeletedAccount(deleted);
     }
 }

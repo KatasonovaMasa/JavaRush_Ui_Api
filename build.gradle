@@ -61,6 +61,7 @@ dependencies {
             "io.qameta.allure:allure-rest-assured:$allureVersion",
             "io.qameta.allure:allure-junit5:$allureJunitVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
+            "org.assertj:assertj-core:$assertjCoreVersion",
             "io.rest-assured:rest-assured:$restAssured",
             "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
             "com.github.javafaker:javafaker:$javaFakerVersion",

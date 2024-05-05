@@ -4,17 +4,11 @@ import io.qameta.allure.Step;
 import ui.pages.FunctionOfTheStartTrainingPage;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.closeWindow;
 import static com.codeborne.selenide.Selenide.switchTo;
 
 public class FunctionOfTheStartTrainingStep {
 
     FunctionOfTheStartTrainingPage functionOfTheStartTrainPage = new FunctionOfTheStartTrainingPage();
-
-    @Step("Проверить, что курс создался")
-    public void checkThisIsWhereTheyBecomeJavaProgrammersOne() {
-        functionOfTheStartTrainPage.checkThisIsWhereTheyBecomeJavaProgrammers.shouldHave(text("Здесь становятся Java‑программистами").because("Не отображается варианты создания аккаунта")).click();
-    }
 
     @Step("Проверить, что курс создался")
     public void checkThisIsWhereTheyBecomeJavaProgrammers() {

@@ -1,6 +1,5 @@
 package ui.steps;
 
-import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Step;
 import ui.pages.IntegrationSocialNetworkPage;
 import ui.pages.StartPage;
@@ -9,22 +8,22 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.closeWindow;
 import static com.codeborne.selenide.Selenide.switchTo;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class IntegrationSocialNetworkStep {
 
     IntegrationSocialNetworkPage integrationSocialNetworkPage = new IntegrationSocialNetworkPage();
     StartPage startPage = new StartPage();
 
-
     @Step("Проскролить вниз страницы ")
     public void scrollDownPage() {
-        WebDriverRunner.getWebDriver().manage().window().maximize();
         startPage.downloadButton.scrollIntoView(true);
     }
 
     @Step("Нажать на иконку YouTube")
     public void openYouTubeIcon() {
-        startPage.openYouTube.click();
+        startPage.openYouTube.shouldBe(visible.because("Не видна иконка YouTube")).click();
     }
 
     @Step("Перейти на другую вкладку")
@@ -35,18 +34,18 @@ public class IntegrationSocialNetworkStep {
     @Step("Принять правила YouTube")
     public void acceptYouTube() {
         if (integrationSocialNetworkPage.acceptYouTube.has(visible)) {
-            integrationSocialNetworkPage.acceptYouTube.click();
+            integrationSocialNetworkPage.acceptYouTube.shouldBe(visible.because("Не появились правила YouTube")).click();
         }
     }
 
     @Step("Проверка перехода в канал YouTube - JavaRush")
     public void checkYouTubePage() {
-        integrationSocialNetworkPage.youTubeChannel.shouldHave(text("JavaRush").because("Не перешли на JavaRush канал в YouTube"));
+        assertThat(getWebDriver().getTitle()).isEqualTo("JavaRush - YouTube");
     }
 
     @Step("Нажать на иконку Telegram")
     public void openTelegramIcon() {
-        startPage.openTelegram.click();
+        startPage.openTelegram.shouldBe(visible.because("Не видна иконка Telegram")).click();
     }
 
     @Step("Перейти на другую вкладку")

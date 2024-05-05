@@ -17,6 +17,6 @@ public class SidebarPage {
         return $(byTagAndText("div", (typeElement)));
     }
     public SelenideElement sectionApplication(String param) {
-        return $x(String.format("//a[contains(text(),'%s')]", param));
+        return $x(String.format("//a[contains(@class,'tabs__button') and contains(text(),'%s')]", param));
     }
 }

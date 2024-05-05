@@ -1,6 +1,5 @@
 package ui.steps;
 
-import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Step;
 import ui.pages.SearchOnSectionsPage;
 
@@ -19,14 +18,12 @@ public class SearchOnSectionsStep {
 
     @Step("Нажать на поиск")
     public void pressSearchInput() {
-        WebDriverRunner.getWebDriver().manage().window().fullscreen();
         sleep(1000);
         searchOnSectionsPage.searchInput.click();
     }
 
     @Step("Ввести в поиск 'Тестирование' и нажать Enter")
     public void enterSearchSetValue() {
-        WebDriverRunner.getWebDriver().manage().window().fullscreen();
         searchOnSectionsPage.enteringIntoSearch.setValue("Тестирование").pressEnter();
     }
 

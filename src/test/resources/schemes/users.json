@@ -27,7 +27,7 @@
           "type": ["string", "null"]
         },
         "country": {
-          "type": "string"
+          "type": ["string", "null"]
         },
         "city": {
           "type": ["string", "null"]

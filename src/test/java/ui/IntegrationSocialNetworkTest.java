@@ -35,6 +35,5 @@ public class IntegrationSocialNetworkTest extends TestBase {
         integrationSocialNetworkStep.openPageYouTube();
         integrationSocialNetworkStep.acceptYouTube();
         integrationSocialNetworkStep.checkYouTubePage();
-        integrationSocialNetworkStep.closePage();
     }
 }

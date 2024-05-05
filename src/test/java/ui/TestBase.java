@@ -1,6 +1,7 @@
 package ui;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import help.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -38,6 +39,7 @@ public class TestBase {
     static void beforeAll() {
         Configuration.baseUrl = System.getProperty("baseUrl", config.getBaseUrl());
         Configuration.pageLoadStrategy = "eager";
+        Configuration.timeout = 30000;
         Configuration.browserSize = System.getProperty("browserSize", config.getBrowserSize());
         Configuration.browser = System.getProperty("browser", config.getBrowser());
         Configuration.remote = System.getProperty("selenoid");

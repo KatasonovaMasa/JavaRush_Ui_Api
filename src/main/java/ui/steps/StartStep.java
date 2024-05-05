@@ -14,22 +14,18 @@ public class StartStep{
     @Step("Открываем главную страницу")
     public void openJavaRush() {
         open("/");
-        refresh();
-        refresh();
         WebDriverRunner.getWebDriver().manage().window().maximize();
     }
 
     @Step("Закрываем куки")
     public void closeCookie() {
-        WebDriverRunner.getWebDriver().manage().window().maximize();
         if (startPage.closeCookie.isDisplayed()) {
-            startPage.closeCookie.click();
+            startPage.closeCookie.shouldBe(visible.because("Куки не закрыты")).click();
         }
     }
 
     @Step("Нажать на 'Начать обучение' в меню")
     public void startLearnOne() {
-        WebDriverRunner.getWebDriver().manage().window().maximize();
         if (startPage.startLearningOne.isDisplayed()) {
             startPage.startLearningOne.shouldBe(visible.because("Не видна кнопка 'Начать обучение'")).click();
         }

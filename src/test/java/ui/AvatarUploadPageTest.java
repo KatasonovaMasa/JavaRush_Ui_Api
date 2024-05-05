@@ -21,7 +21,7 @@ public class AvatarUploadPageTest extends TestBase {
 
     @Test
     @DisplayName("Загрузка аватара в фото профиля с помощью uploadFromClasspath")
-    void uploadingAnAvatarToYourProfilePhoto() {
+    void uploadingAnAvatarToYourProfilePhoto(){
         startStep.openJavaRush();
         startStep.startLearnOne();
         creatACourseStep.pressStartButton();
@@ -32,7 +32,8 @@ public class AvatarUploadPageTest extends TestBase {
         creatACourseStep.inputPassword(expectedPassword);
         creatACourseStep.clickCreatAccount();
         creatACourseStep.checkCreatAccount();
-        sidebarStep.scrollDownAndOpenSettings();
+        sidebarStep.scrollDownSettings();
+        sidebarStep.openSettings();
         avatarUploadStep.openPhotoUploadInEditMode();
         avatarUploadStep.uploadAPicture(imgUpload);
         avatarUploadStep.checkTheImgClassHasChang();
@@ -54,7 +55,8 @@ public class AvatarUploadPageTest extends TestBase {
         creatACourseStep.inputPassword(expectedPassword);
         creatACourseStep.clickCreatAccount();
         creatACourseStep.checkCreatAccount();
-        sidebarStep.scrollDownAndOpenSettings();
+        sidebarStep.scrollDownSettings();
+        sidebarStep.openSettings();
         avatarUploadStep.openPhotoUploadInEditMode();
         avatarUploadStep.uploadAPictureTwo();
         avatarUploadStep.checkTheImgClassHasChang();
