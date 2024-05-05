@@ -24,11 +24,13 @@ public class AvatarUploadStep {
 
     @Step("Загрузить картинку")
     public void uploadAPicture(String imgUpload) {
+        WebDriverRunner.getWebDriver().manage().window().maximize();
         avatarUploadPage.avatarUpload.uploadFromClasspath(imgUpload);
     }
 
     @Step("Загрузить картинку")
     public void uploadAPictureTwo() {
+        WebDriverRunner.getWebDriver().manage().window().maximize();
         avatarUploadPage.avatarUpload.uploadFile(file);
     }
 
