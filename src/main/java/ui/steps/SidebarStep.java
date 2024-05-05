@@ -1,5 +1,6 @@
 package ui.steps;
 
+import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Step;
 import ui.pages.SidebarPage;
 
@@ -28,6 +29,7 @@ public class SidebarStep {
 
     @Step("Пролистать вниз")
     public void scrollDownSettings() {
+        WebDriverRunner.getWebDriver().manage().window().maximize();
         sidebarPage.sidebarBookmarks.should(hidden.because("Не смогли проскролить вниз"));
         sidebarPage.sidebarBookmarks.scrollTo();
     }
